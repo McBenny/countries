@@ -9,7 +9,7 @@ const htmlWebpackPlugin = new HtmlWebPackPlugin({
 })
 
 // Configure status logs while build.
-const statsConfig = {    
+const statsConfig = {
   colors: true,
   hash: true,
   timings: true,
@@ -59,7 +59,8 @@ module.exports = {
   plugins: [
     htmlWebpackPlugin,
     new Dotenv({
-      path: path.resolve(process.cwd(), `config/${process.env.NODE_ENV}.env`),
+      // path: path.resolve(process.cwd(), `config/${process.env.NODE_ENV}.env`),
+      path: path.resolve(process.cwd(), `config/development.env`),
     }),
   ],
   stats: statsConfig,
