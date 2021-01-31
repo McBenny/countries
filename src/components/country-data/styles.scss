@@ -1,0 +1,29 @@
+.country {
+    &__flag {
+        margin: 1rem auto 0;
+        width: 200px;
+        height: 100px;
+        background-size: contain !important;
+    }
+
+    &__name {
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    &__dataset {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        flex-basis: 100px;
+        margin-bottom: 1rem;
+        font-weight: 600;
+    }
+
+    &__data {
+        flex-basis: calc(100% - 100px);
+        margin: 0 0 1rem;
+    }
+}

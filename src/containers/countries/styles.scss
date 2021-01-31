@@ -1,0 +1,19 @@
+.countries {
+    &__search {
+        margin-bottom: 1rem;
+        display: flex;
+    }
+
+    &__keyword {
+        flex-grow: 1;
+    }
+
+    &__search-button {
+        flex-grow: 0;
+        margin-left: 1rem !important;
+    }
+
+    &__list {
+        text-align: center;
+    }
+}
