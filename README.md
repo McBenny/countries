@@ -1,82 +1,35 @@
-## minimal-react-boilerplate
+## Countries display and search
 
-![](https://img.shields.io/github/package-json/v/rishichawda/minimal-react-boilerplate.svg?style=popout-square)
-![](https://img.shields.io/github/last-commit/rishichawda/minimal-react-boilerplate/master.svg?style=popout-square)
-![](https://flat.badgen.net/dependabot/dependabot/dependabot-core/?icon=dependabot)
-![](https://img.shields.io/travis/rishichawda/minimal-react-boilerplate.svg?style=popout-square)
+This repo is based on [Minimal React Boilerplate](https://github.com/rishichawda/minimal-react-boilerplate) with some additions (react-router-dom, prop-types, axios and Material-UI).
 
-A minimal react boilerplate with webpack 4, babel v7 and sass support.
+Once installed, this app will:
 
-- **Webpack 4** - All the good things from Webpack 4 including faster builds.
-- **Babel 7**
-- **ESLint ( with prettier config )** - give the configuration a shot and thank me later. :smile:
-- **Husky** - Pre-commit lint check for staged files to ensure :poop:-code is never commited.
-- **CSS and SASS support.**
+-   Display a search input with a **Search** button,
+-   Display a loader animation while it connects to a distant API to retrieve a list of countries,
+-   Display the list of countries by pages of 10 countries (offering "**previous**" and "**next**" buttons when needed)
+-   A click on a country's name will display a specific page with the country's data (Flag, name, population and demonym), together with a "**Back**" button.
+-   When typing a country's name (or partial), clicking on the "**Search**" button will filter the list of countries to the ones matching the search, and the **previous/next** buttons will be displayed according to the new list.
 
-- **Easy and cleaner imports with [babel module resolver](https://github.com/tleunen/babel-plugin-module-resolver).**
+### Possible enhancements
 
-For example, if you have a directory structure like this:
+-   Once a search has filtered the list of countries, the user needs to proceed to a new "_blank_" search to get back the full list of countries. This should be modified, maybe by adding a "**Clear search**" button.
+-   There is no title, no text of any kind apart from the list of countries, adding some text would explain the purpose and features of the app.
 
-```
-src
--- components
--- config
----- secret-config.js
--- pages
----- home
------- index.js
-```
+Technically speaking, this was done in a few hours (more than 3), no testing was implemented except from a basic one, but linting was polished.
 
-You can import `secret-config.js` in `index.js` as :
+## Installation
 
-```jsx
-import config from "config/secret-config.js";
-```
+#### Requirements:
 
-- **Environment files** - environment variable imports are already configured and added! Just create `development.env` and `production.env` ( inside config directory ) with your environment variables and start using them in your app! :tada:
+-   node v13.10.1,
+-   npm v6.13.7
 
-- **Snapshots and DOM testing** - Includes DOM testing with [Jest](https://jestjs.io) and [react-testing-library](https://github.com/testing-library/react-testing-library) and also includes snapshot test examples with Jest. `travis.yml` is already included to run the tests on [TravisCI]().
+### Process:
 
-## Usage :
+-   `yarn install`
 
-1. Clone the repository via _SSH_ :
+The installation step is extremely long, potentially taking more than 20 minutes. I advise to use **yarn** instead of **npm** as yarn will provide visual feedback of the process, avoiding thinking something has gone wrong.
 
-```
-$ git clone git@github.com:rishichawda/minimal-react-boilerplate.git
-```
+## Usage
 
-or _HTTPS_ :
-
-```
-$ git clone https://github.com/rishichawda/minimal-react-boilerplate.git
-```
-
-2.
-
-```
-$ cd minimal-react-boilerplate
-$ npm install
-```
-
-#### Unfamiliar with git?
-
-Simply click [here](https://github.com/rishichawda/minimal-react-boilerplate/archive/master.zip) to download the zip. Extract the _.zip_ file and run the following commands inside the directory.
-
-```
-$ npm install
-$ npm run start
-```
-
-##
-
-To start the development server :
-
-```
-$ npm run start
-```
-
-To generate production build :
-
-```
-$ npm run build
-```
+-   `npm start`
