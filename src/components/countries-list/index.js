@@ -37,7 +37,7 @@ const CountriesList = ({
 
     return (
         <>
-            <List>
+            <List component="nav">
                 {dataSubSet.map(country => <ListItem
                     key={country.alpha3Code}
                     button
@@ -70,7 +70,7 @@ const CountriesList = ({
 };
 
 CountriesList.propTypes = {
-    data: PropTypes.objectOf(PropTypes.object).isRequired
+    data: PropTypes.arrayOf(PropTypes.string).isRequired
 };
 
 export default CountriesList;
