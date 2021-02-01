@@ -12,7 +12,7 @@ const countryAPI = 'https://restcountries.eu/rest/v2/alpha';
 const Country = () => {
     const [selectedCountry, setSelectedCountry] = useState({});
     const getCountryData = () => (
-        axios.get(`${countryAPI}/${getParamFromURL('c')}`)
+        axios.get(`${countryAPI}/${getParamFromURL('c')}?fields=name;flag;population;demonym`)
     );
     useEffect(() => {
         getCountryData().then(

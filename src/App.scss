@@ -2,9 +2,22 @@
     margin: 2rem auto;
     max-width: 450px;
     font-family: Roboto, sans-serif;
-    color: #777;
+    color: #757575;
 }
 
 [hidden] {
     display: none !important;
+}
+
+.sr-only {
+    position: absolute;
+    margin: -1px;
+    border: 0;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip-path: polygon(0 0, 0 0, 0 0);
+    padding: 0;
+    white-space: nowrap;
 }

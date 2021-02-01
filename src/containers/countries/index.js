@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { Button, TextField } from '@material-ui/core';
+import { Button, TextField, InputLabel } from '@material-ui/core';
 import CircularProgress from '@material-ui/core/CircularProgress';
 
 import CountriesList from '../../components/countries-list';
@@ -39,8 +39,11 @@ const Countries = () => {
 
     return (
         <div className="countries">
+            <h1 className="sr-only">Countries</h1>
             <form className="countries__search">
+                <InputLabel htmlFor="keyword" className="sr-only">Type here to search...</InputLabel>
                 <TextField
+                    id="keyword"
                     className="countries__keyword"
                     variant="outlined"
                     size="small"

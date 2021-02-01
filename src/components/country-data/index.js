@@ -27,7 +27,12 @@ const CountryData = ({
 };
 
 CountryData.propTypes = {
-    data: PropTypes.objectOf(PropTypes.object).isRequired
+    data: PropTypes.shape({
+        name: PropTypes.string,
+        flag: PropTypes.string,
+        population: PropTypes.number,
+        demonym: PropTypes.string
+    }).isRequired
 };
 
 export default CountryData;
